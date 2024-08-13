@@ -1,9 +1,8 @@
 import React from "react";
-import { MainContainer, ButtonContainer } from "./styles";
+import { MainContainer, ContentsContainer } from "./styles";
 import icBurger from '../../assets/ic_burger.svg';
-import { TitleContainer } from "../../components/atoms/Title/styles";
 
-const AgreeTerms = () => {
+const Login = () => {
     return (
       <MainContainer>
       <img
@@ -19,17 +18,31 @@ const AgreeTerms = () => {
           marginRight: 'auto',    // Auto margin on the right
         }}
       />
-    <ButtonContainer>
-        Button content here
-    </ButtonContainer>
-    <ButtonContainer>
-        Button content here
-    </ButtonContainer>
-    <div style={{ position: 'absolute', bottom: '0', width: '100%', textAlign: 'center' }}>
+    <ContentsContainer style={{ marginTop: 50, textAlign: 'center' }}>
+      <div>
+        <span style={{ fontWeight: 'bold' }}>내 집 주차장</span>을
+      </div>
+      <div>
+        빌려드립니다
+      </div>
+    </ContentsContainer>
+    <ContentsContainer style={{ marginTop: 24}}>
+      가장 빠른 회원가입
+    </ContentsContainer>
+    <ContentsContainer>
+      카카오로 시작하기
+    </ContentsContainer>
+    <ContentsContainer>
+      네이버로 시작하기
+    </ContentsContainer>
+    <ContentsContainer>
+      애플로 시작히기
+    </ContentsContainer>
+    <div style={{ position: 'absolute', bottom: '20px', width: '100%', textAlign: 'center' }}>
         test
     </div>
     </MainContainer>
     );
 };
 
-export default AgreeTerms;
+export default Login;
