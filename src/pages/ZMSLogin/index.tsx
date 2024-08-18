@@ -2,6 +2,7 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { MainContainer, ContentsContainer, CouponInputContainer } from "./styles";
 import icBurger from '../../assets/ic_burger.svg';
+import ToggleButton from "../../components/atoms/Toggle";
 
 const ZMSLogin = () => {
     // useForm 훅을 사용하여 폼 컨트롤을 초기화
@@ -9,6 +10,7 @@ const ZMSLogin = () => {
 
     return (
       <MainContainer>
+        <ToggleButton></ToggleButton>
         <img
           src={icBurger}
           alt="Burger Icon"
@@ -24,8 +26,6 @@ const ZMSLogin = () => {
         />
         <ContentsContainer>
           <CouponInputContainer>
-
-            // 굳이 컨트롤러 감싸야 하는지 텍스트 아레아 써서 활용방안은? 
             <Controller
               name="couponNumber"
               control={control}

@@ -14,5 +14,3 @@ export const ButtonContainer = styled('div', {
     fontSize: '14px',
     margin: 'auto auto 16px auto',
 });
-
-export {};

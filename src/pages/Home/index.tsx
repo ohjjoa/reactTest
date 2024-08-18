@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FixedSizeList as List } from 'react-window';
 import { TestContainer, Sidebar, SidebarOpen } from './styles';
 import icBurger from '../../assets/ic_burger.svg';
+import ToggleButton from '../../components/atoms/Toggle';
+
 
 // 리스트 항목의 데이터
 // const items = new Array(5).fill(null).map((_, index) => `Item ${index + 1}`);
@@ -71,6 +73,7 @@ const Home = () => {
 
   return (
     <div ref={backgroundRef}>
+      <ToggleButton></ToggleButton>
       <TestContainer>
         <img
           src={icBurger}

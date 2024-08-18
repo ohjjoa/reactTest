@@ -3,15 +3,18 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import AgreeTerms from './pages/AgreeTerms';
 import ZMSLogin from './pages/ZMSLogin';
+import ParkingShared from './pages/ParkingShared'
+import Profile from './pages/Profile';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<ParkingShared />} />
         <Route path="/" element={<ZMSLogin />} />
         <Route path="/" element={<Login />} />
-        <Route path="/" element={<AgreeTerms />} />
-        
+        <Route path="/" element={<AgreeTerms />} />        
         <Route path="/" element={<Home />} />
         
         {/* 다른 Route 추가 가능 */}
