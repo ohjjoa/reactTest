@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from 'react';
 import { MainContainer } from "../Login/styles";
 import icBurger from '../../assets/ic_burger.svg';
+import CheckModal from "../../components/atoms/CheckModal";
 
-const Profile = () => {
+
+const Profile: React.FC = () => {
+
+  const [isApplyCheckModal, setIsApplyCheckModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsApplyCheckModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsApplyCheckModal(false);
+  };
     return (
         <MainContainer>
         <div style={{
@@ -21,11 +33,17 @@ const Profile = () => {
             <div>안녕하세요!</div>
             <div>01012345678님</div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column',  alignItems: 'flex-end', flex: 1}} onClick={() => {
-            alert('사진 클릭')
-        }}>
-            프로필 이미지
-        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', flex: 1 }} onClick={handleOpenModal}>
+      프로필 이미지
+
+      <CheckModal
+        isVisible={isApplyCheckModal}
+        onClose={handleCloseModal}
+        title="Confirm Action"
+        content="Are you sure you want to proceed?"
+        buttonText="OK"
+      />
+    </div>
       </div>
       <div style={{
         width: '300px', 

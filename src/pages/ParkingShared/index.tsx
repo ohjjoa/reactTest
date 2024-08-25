@@ -5,9 +5,9 @@ const ParkingShared = () => {
     <div style={{ 
       display: 'flex', 
       flexDirection: 'column', 
-      alignItems: 'center', // 중앙 정렬
-      justifyContent: 'center', // 중앙 정렬
-      textAlign: 'center' // 텍스트 중앙 정렬
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      textAlign: 'center' 
     }}>
       <div>공유 중인 주차장이 없습니다.</div>
       <div style={{ marginTop: '12px'}}>
@@ -16,10 +16,10 @@ const ParkingShared = () => {
       </div>
 
       <div style={{
-         width: '300px',       // 사각형의 너비
-         height: '100px',      // 사각형의 높이
+         width: '300px',       
+         height: '100px',      
          display: 'flex',
-         backgroundColor: '#8B63BB', // 배경색
+         backgroundColor: '#8B63BB', 
          borderRadius: '10px',
          marginTop: '20px'
       }}>
