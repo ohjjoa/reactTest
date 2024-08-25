@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MainContainer } from "../Login/styles";
 import icBurger from '../../assets/ic_burger.svg';
 import CheckModal from "../../components/atoms/CheckModal";
+import TowButtonCheckModal from '../../components/atoms/TwoButtonCheckModal ';
 
 
 const Profile: React.FC = () => {
@@ -36,12 +37,14 @@ const Profile: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', flex: 1 }} onClick={handleOpenModal}>
       프로필 이미지
 
-      <CheckModal
+      <TowButtonCheckModal
         isVisible={isApplyCheckModal}
         onClose={handleCloseModal}
         title="Confirm Action"
         content="Are you sure you want to proceed?"
-        buttonText="OK"
+        leftButtonText='하위'
+        rightButtonText='하위2'
+        
       />
     </div>
       </div>
